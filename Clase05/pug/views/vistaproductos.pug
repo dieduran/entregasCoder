@@ -1,0 +1,31 @@
+html
+    head 
+        meta(charset='utf-8')
+        title='Productos'
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css")
+    body
+        .container.mt-3
+            .jumbotron
+                h2(style="color:crimson;")="Vista de Productos"
+                block tabla 
+                    if productoExiste
+                        table-responsive
+                            table(class="table table-dark")
+                                tr(style="color: yellow;")
+                                    th='Title'
+                                    th='Price'
+                                    th='Foto'
+                                tr
+                                each producto in productos
+                                    tr
+                                        td=producto.title
+                                        td=producto.price
+                                        td=''
+                                            img(src=producto.thumbnail, width="50" height="50")                
+                    else
+                        h3(class="alert alert-danger")='No se encontraron productos'
+                
+                block pie
+                    a(class="btn btn-primary mt-3 mb-5" href="/productos")="Cargar Productos"
+

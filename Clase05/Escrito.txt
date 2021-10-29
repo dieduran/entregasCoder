@@ -1,0 +1,2 @@
+Con muy poco conocimiento del verdadero potencial de cada uno de los motores de plantillas utilizados en clase (handlebars, ejs y pug) me resulto mas facil utilizar ejs. 
+Me pareció que el utilizar html para la estructura y comandos mas parecidos a javascript para insertar en la parte de datos y además viniendo del viejo ASP (como experiencia previa) me fue mucho mas facil adaptarme a ejs.
