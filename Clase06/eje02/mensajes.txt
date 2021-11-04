@@ -1,0 +1,14 @@
+[
+  {
+    "emisor": "diego.duran@gmail.com",
+    "fechaHora": "2021-11-04T19:28:27.438Z",
+    "texto": "mensaje 1",
+    "id": 1
+  },
+  {
+    "emisor": "diego.duran@gmail.com",
+    "fechaHora": "2021-11-04T19:28:30.630Z",
+    "texto": "mensaje 2",
+    "id": 2
+  }
+]

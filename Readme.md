@@ -9,8 +9,9 @@ _En cada carpeta se encontrará el código correspondiente a cada entrega_
 * Clase 03 
 * Clase 04 
 * Clase 05
+* Clase 06
 
-Actualizado al 28/10/2021
+Actualizado al 04/11/2021
 
 ## Autor
 
