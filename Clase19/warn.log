@@ -1,0 +1,11 @@
+[2022-02-14T20:16:07.762] [WARN] default - Ruta GET /favicon.ico no implementada
+[2022-02-14T20:16:13.844] [WARN] default - Ruta GET /principal.html no implementada
+[2022-02-14T20:16:15.626] [WARN] default - Ruta GET /principal.html no implementada
+[2022-02-14T20:16:18.193] [WARN] default - Ruta GET /principal.html no implementada
+[2022-02-14T20:17:54.713] [WARN] default - Ruta GET /principal.hbs no implementada
+[2022-02-14T20:31:25.596] [ERROR] default - Invalid Password
+[2022-02-14T20:31:34.627] [ERROR] default - User Not Found with username juancarlos
+[2022-02-15T19:53:25.129] [WARN] default - Ruta GET /favicon.ico no implementada
+[2022-02-15T20:38:15.869] [ERROR] default - User Not Found with username juancarlos
+[2022-02-15T20:41:28.693] [ERROR] default - User Not Found with username dos
+[2022-02-15T21:23:31.294] [WARN] default - Ruta GET /comprimida no implementada
