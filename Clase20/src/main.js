@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
+//import dotenv from 'dotenv';
+//dotenv.config();
 
 import express from  'express'
 import handlebars from 'express-handlebars'
@@ -8,18 +8,14 @@ import Yargs from 'yargs'
 import cluster from 'cluster'
 import os from 'os'
 import session from 'express-session' /** para manejo de sesion */
-
 import { Server as HttpServer } from  'http'
 import { Server as Socket } from 'socket.io'
 
 import logger from "./utils/logger.js";
 
-//import config from  '../src/options/config.js'
-
-import { credenciales } from "./config/credenciales.js";
+import {credenciales } from "./config/credenciales.js";
 import passport from './controllers/auth.js'
 import {conectarDB} from './config/conexionBD.js'
-//import ContenedorMongoDB from  './persistence/containers/contenedorMongoDb.js'
 import {routerProductos} from './routes/routerProducto.js'
 import {routerInfo} from './routes/routerInfo.js'
 import {routerRandom} from './routes/routerRandom.js'
@@ -47,15 +43,13 @@ const app = express()
 const httpServer = new HttpServer(app)
 const io = new Socket(httpServer)
 
-
-//const productos= new ContenedorMongoDB('productosEje11')
 const productos= new ProductosRepo();
-//const mensajes= new ContenedorMongoDB('mensajesEje11')
 const mensajes = new MensajesRepo();
+
+const productos2 = new ProductosRepo(); //solo para ver que utiliza singleton
 
 /*-----------------------------------------*/
 //const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
-   
 app.use(
     session({
       secret: credenciales.SESSION_SECRET_KEY,

@@ -1,8 +1,6 @@
-//import { MongoClient } from 'mongodb'
-
 import { MongoClient } from "mongodb";
-import mongoose from "mongoose";
-import config from  '../../config/config.js' //'../../config/config.js'
+//import mongoose from "mongoose";
+import config from  '../../config/config.js'
 import logger from "../../utils/logger.js";
 
 class  ContenedorMongoDB {
@@ -11,7 +9,6 @@ class  ContenedorMongoDB {
         
         this.nombreColeccion=  nombreColeccion;
         this.nombreDb= config.mongodb.nombreDb;
-        //this.datos = new MongoClient(config.mongodb.uri, { useNewUrlParser: true, useUnifiedTopology: true });
         this.datos= new MongoClient(config.mongodb.uri, { useNewUrlParser: true, useUnifiedTopology: true })
         this.conectar();
     }
@@ -19,7 +16,7 @@ class  ContenedorMongoDB {
     conectar= async()=>{
         await this.datos.connect();
         //await mongoose.connect(config.mongodb.uri, config.mongodb.options);
-        logger.info(this.nombreColeccion + " dao en mongodb -> listo");
+        //logger.info(this.nombreColeccion + " dao en mongodb -> listo");
         }
 
     getAll= async()=>{//    getAll(): Object[] - Devuelve un array con los objetos presentes en el archivo.

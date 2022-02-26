@@ -1,9 +1,6 @@
 import { credenciales } from "./credenciales.js"
 
-const OPCION_DATOS =  'mongodb'
-
 export default {
-    OPCION_DATOS,
     fileSystem: {
         path: './DB'
     },
