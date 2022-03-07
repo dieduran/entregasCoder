@@ -1,0 +1,61 @@
+#---------------------
+# CONSULTAS MIAS PARA GRAPIQL
+#---------------------
+
+query {
+  getProductos {
+    nombre
+    precio
+    foto
+  }
+}
+
+mutation {
+  createProducto(datos: {
+    nombre: "productoXGraphQL",
+    precio: 35,
+    foto: "https://dc722jrlp2zu8.cloudfront.net/media/fbads-graphql.jpg"
+  }) {
+    id
+  }
+}
+
+
+#---------------------
+# ORIGINALES DEL PROFE
+#---------------------
+mutation {
+  createPersona(datos: {
+    nombre: "marian",
+    edad: 35
+  }) {
+    id
+  }
+}
+
+query {
+  getPersonas {
+    id
+    nombre
+    edad
+  }
+}
+
+mutation {
+  updatePersona(id: "96c17141d970279501dd", input: {
+    nombre: "marianito",
+    edad: 35
+  }) {
+    id
+    nombre
+    edad
+  }
+}
+
+mutation {
+  deletePersona(id: "5500a074e06424aabfc7") {
+    id
+    nombre
+    edad
+  }
+}

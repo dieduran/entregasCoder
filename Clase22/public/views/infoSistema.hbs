@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+<style>
+    .table td,
+    .table th {
+        vertical-align: middle;
+    }
+</style>
+
+{{!-- {{if data}} --}}
+    <div class="container mt-3">
+        <div class="jumbotron">
+            <div class="table-responsive">
+                <table class="table table-dark">
+                    <tr><td>Información del Sistema</td></tr>
+                    <tr style="color: yellow;">
+                        <th>Carateristica</th>
+                        <th>Valor</th>
+                    </tr>
+                    <tr> <td>Arg:</td><td>{{data.Arg}}</td></tr>
+                    <tr> <td>SO:</td><td>{{data.SO}}</td></tr>
+                    <tr> <td>Node:</td><td>{{data.Node}}</td></tr>
+                    <tr> <td>Memoria:</td><td>{{data.Memoria}}</td></tr>
+                    <tr> <td>execPath:</td><td>{{data.execPath}}</td></tr>
+                    <tr> <td>PID:</td><td>{{data.PID}}</td></tr>
+                    <tr> <td>ProjectFolder:</td><td>{{data.ProjectFolder}}</td></tr>
+                    <tr> <td>NroProcesadores:</td><td>{{data.NroProcesadores}}</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{{!-- {{else}}
+    <h3 class="alert alert-danger">No se encontro la informacion del sistema</h3>
+{{/if}} --}}
+
