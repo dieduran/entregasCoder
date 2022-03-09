@@ -12,13 +12,14 @@ query {
 
 mutation {
   createProducto(datos: {
-    nombre: "productoXGraphQL",
-    precio: 35,
+    nombre: "OtroProductoXGraphQL",
+    precio: 42,
     foto: "https://dc722jrlp2zu8.cloudfront.net/media/fbads-graphql.jpg"
   }) {
     id
   }
 }
+
 
 
 #---------------------

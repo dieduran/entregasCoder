@@ -1,6 +1,6 @@
-# Clase 22 - 
+# Clase 20 - Arquitectura y Diseño
 
-Entregable clase 22
+Entregable clase 20
 
 ## Instalar dependencias
 

@@ -63,11 +63,14 @@ const schema = buildSchema(`
     precio: Float,
     foto: String
   }
+  type Rdo{
+    id: Float
+  }
   type Query {
     getProductos(campo: String, valor: String): [Producto],
   }
   type Mutation {
-    createProducto(datos: ProductoInput): Producto
+    createProducto(datos: ProductoInput): Rdo
   }
 `);
 
@@ -86,7 +89,7 @@ async function  createProducto({ datos }) {
   logger.info('nuevoProducto: ', nuevoProducto)
   //const nuevaPersona = new Persona(id, datos)
   //personasMap[ id ] = nuevaPersona;
-  return nuevoProducto;
+  return {id: nuevoProducto};
 }
 
 app.use('/graphql', graphqlHTTP({

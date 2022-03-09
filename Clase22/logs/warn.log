@@ -44,3 +44,5 @@
 [2022-02-24T17:23:43.818] [ERROR] default - User Not Found with username diego@gmail.com
 [2022-02-24T19:18:42.640] [WARN] default - Ruta GET /url%203 no implementada
 [2022-02-24T20:10:49.785] [ERROR] default - User Not Found with username diego@gmail.com
+[2022-03-08T20:02:30.425] [WARN] default - Ruta GET /graphiql no implementada
+[2022-03-08T20:02:54.628] [WARN] default - Ruta GET /graphiql no implementada
