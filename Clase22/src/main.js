@@ -74,8 +74,10 @@ const schema = buildSchema(`
   }
 `);
 
-function getProductos({ campo, valor }) {
+//function getProductos({ campo, valor }) {
+let getProductos = async ({ campo, valor }) => {  
   const productosTodos = productos.listar();
+  logger.info('getProductos GraphQL.')
   if (campo && valor) {
       return productosTodos.filter(p => p[ campo ] == valor);
   } else {
@@ -83,12 +85,11 @@ function getProductos({ campo, valor }) {
   }
 }
 
-async function  createProducto({ datos }) {
-  logger.info('datos: ', datos)
+//async function  createProducto({ datos }) {
+let createProducto = async  ({ datos })=> {
+  logger.info('createProducto en GraphQL.')
   const nuevoProducto = await productos.insertar(datos)
   logger.info('nuevoProducto: ', nuevoProducto)
-  //const nuevaPersona = new Persona(id, datos)
-  //personasMap[ id ] = nuevaPersona;
   return {id: nuevoProducto};
 }
 
@@ -124,15 +125,26 @@ io.on('connection', async socket => {
   logger.info('Nuevo cliente conectado!');
 
   // carga inicial de producto
-  socket.emit('productos',await productos.listar())
+  //ANTES....
+  //socket.emit('productos',await productos.listar())
+  //AHORA CON GRAPHQL...
+  socket.emit('productos',await getProductos(''))
 
   // carga inicial de productosRandom
   socket.emit('productosRandom',await cargarProductoRandom(PORT))
   
   // actualizacion de producto
   socket.on('updateProducto', async producto => {
-      await productos.insertar(producto)
-      io.sockets.emit('productos', await productos.listar());
+    //ANTES: 
+    //await productos.insertar(producto)
+    //AHORA CON GRAPHQL...
+    let {nombre,precio,foto}=producto
+      let inputDatos = { datos: { nombre, precio, foto}}      
+      await createProducto(inputDatos )
+      //ANTES...
+      //io.sockets.emit('productos', await productos.listar());
+      //AHORA CON GRAPHQL...
+      io.sockets.emit('productos',await getProductos(''));
   })
 
   // carga inicial de mensajes

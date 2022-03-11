@@ -17,8 +17,10 @@ formAgregarProductos.addEventListener('submit', e => {
         precio: formAgregarProductos [ 1 ].value, 
         foto: formAgregarProductos [ 2 ].value, 
     }
+    
     // envio el producto al servidor via socket
     socket.emit('updateProducto', producto);
+
     // limpio el contenido de los campos del formulario
     formAgregarProductos.reset()
 })

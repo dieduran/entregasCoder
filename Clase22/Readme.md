@@ -1,6 +1,6 @@
-# Clase 20 - Arquitectura y Diseño
+#  Clase 22 - Documentación de APIs + GraphQL
 
-Entregable clase 20
+Entregable clase 22
 
 ## Instalar dependencias
 
